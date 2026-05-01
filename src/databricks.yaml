@@ -37,6 +37,16 @@ variables:
           value: ${var.volume_name}
 
 resources:
+  schemas:
+    ontos_schema:
+      name: ${var.schema_name}
+      catalog_name: ${var.catalog_name}
+  volumes:
+    ontos_volume:
+      name: ${var.volume_name}
+      catalog_name: ${var.catalog_name}
+      schema_name: ${var.schema_name}
+      volume_type: MANAGED
   apps:
     ontos:
       name: "ontos"
